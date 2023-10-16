@@ -19,6 +19,13 @@ body {
     box-sizing: border-box;
 }
 
+#site_heading {
+    margin: 10px;
+    text-align: center;
+    color: #324;
+    font-size: 30px;
+}
+
 #popup {
     background: rgba(0, 0, 0, .5);
     width: 100%;
@@ -133,8 +140,6 @@ body {
     color: var(--text-color, #fff);
     font-size: 15px;
     font-weight: bold;
-    /* display: flex;
-    gap: 10px; */
 }
 
 .btn-group button:hover {
@@ -172,7 +177,7 @@ body {
     background-color: #218aff;
     color: #fff;
     display: inline-block;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 0 5px;
     font-size: 15px;
     border-radius: 5px;
@@ -187,6 +192,7 @@ body {
 table {
     border: 1px solid #979797;
     min-width: 100%;
+    width: max-content;
     font-size: 15px;
     border-spacing: 0;
     text-align: center;
@@ -203,6 +209,7 @@ table tr {
 table th {
     font-weight: 600;
     white-space: nowrap;
+    padding: 0 15px;
     margin: 0;
 }
 
@@ -212,6 +219,8 @@ table tbody tr:nth-child(2n) {
 
 table td {
     padding: 0 15px;
+    min-width: 100px;
+    max-width: 300px;
 }
 
 table #error {
@@ -220,4 +229,26 @@ table #error {
     font-weight: bold;
     padding: 10px 0;
     color: #d1cccc;
+}
+
+@media screen and (max-width: 500px) {
+    #popup_body .form-field {
+        flex-direction: column;
+        height: auto;
+        line-height: 30px;
+    }
+
+    #popup_body .form-field+.form-field {
+        margin-top: 10px;
+    }
+
+    #popup_body .form-field label {
+        width: 100%;
+    }
+
+    #popup_body .form-field input {
+        height: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
