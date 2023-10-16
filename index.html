@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>InternAssignment</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="container">
+      <div id="popup">
+        <div>
+          <form>
+            <div id="popup_header" class="strip">
+              <h2>Add New DRR</h2>
+              <div class="close">&times;</div>
+            </div>
+
+            <div id="popup_body">
+              <div class="form-field">
+                <label for="start_date">Start Date</label>
+                <input type="date" id="start_date" name="start_date" placeholder="dd-mm-yyyy" />
+              </div>
+
+              <div class="form-field">
+                <label for="end_date">End Date</label>
+                <input type="date" id="end_date" name="end_date" placeholder="dd-mm-yyyy" />
+              </div>
+
+              <div class="form-field">
+                <label for="excluded_date">Excluded Dates</label>
+                <input type="date" id="excluded_date" multiple name="excluded_date" placeholder="dd-mm-yyyy" />
+              </div>
+
+              <div class="form-field">
+                <label for="lead_count">Lead Count</label>
+                <input type="number" id="lead_count" name="lead_count" min="0" placeholder="0" />
+              </div>
+
+              <div class="msg">
+              </div>
+            </div>
+
+            <div id="popup_footer" class="strip">
+              <div class="btn-group">
+                <button class="close">Cancel</button>
+                <button type="submit" class="save">Proceed</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="open-popup">Add new</div>
+      </div>
+
+      <div id="records">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Month, Year</th>
+              <th>Dates Excluded</th>
+              <th>Number of Days</th>
+              <th>Lead Count</th>
+              <th>Expected DRR</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tr class="template" style="display: none;">
+            <td class="id"></td>
+            <td class="start_date"></td>
+            <td class="end_date"></td>
+            <td class="month_year"></td>
+            <td class="excluded_date"></td>
+            <td class="no_of_day"></td>
+            <td class="lead_count"></td>
+            <td class="expected_drr"></td>
+            <td class="last_updated"></td>
+          </tr>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
